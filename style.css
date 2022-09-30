@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Roboto&display=swap');
 
 *,
 *::before,
@@ -18,6 +19,12 @@
   --fs-body: 1.3125em;
   --fc-black: #1E1E1E;
   --bc-modal: #fff8be;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: darkgoldenrod
 }
 
 body{
@@ -141,7 +148,7 @@ footer {
 .canvas2 div {
   width: 1px;
   height: 1px;
-  background-color: red;
+  background-color: black;
 }
 .image-preview-box {
   background-position: center;
@@ -167,18 +174,19 @@ footer {
 }
 
 .modal-content {
-  border: 2px solid black;
+  border-radius: 10px;
   width: 50vw;
   height: 50vh;
   background-color: white;
   display: grid;
-  grid-template-rows: auto 80%;
+  grid-template-rows: 2rem auto;
   grid-template-columns: 1fr 85% 1fr;
   grid-template-areas: 
-    ". modal-header ."
-    ". modal-body .";
+    "modal-header modal-header modal-header"
+    "modal-body modal-body modal-body";
   min-height: fit-content;
-  grid-gap: 0.5rem;
+  /* grid-gap: 0.5rem; */
+  overflow: hidden;
 }
 
 .modal-header {
@@ -186,20 +194,29 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr 3fr 1fr;
   grid-template-areas: "code-css-header code-base64-header . close-button";
-  grid-gap: 0.5rem;
-  align-items: center;
-  text-align: center;
+  /* grid-gap: 0.5rem; */
   font-size: 1.2rem;
   /* min-height: fit-content; */
-  background-color: var(--bc-modal);
-  border-radius: 0 0 12px 12px;
+  background-color: #F8E74B;
+  /* border-radius: 0 0 12px 12px; */
 }
 .modal-header > span {
+  display: block;
   height: 100%;
-  text-align: center;
-  background: var(--bc-modal);
+  background: #F8E74B;
   border: none;
-  border-radius: 12px;
+  transition: all ease-in-out 0.2s;
+  text-align: center;
+  cursor: pointer;
+}
+.modal-header > span:hover {
+  background: khaki;
+}
+.modal-header .active {
+  background: gold;
+}
+.modal-header .active:hover {
+  background: gold;
 }
 
 .code-css-header {
@@ -208,6 +225,7 @@ footer {
 }
 .code-base64-header {
   grid-area: code-base64-header;
+  text-align: center;
 }
 
 .close-button {
@@ -221,13 +239,23 @@ footer {
   width: 100%;
   height: 100%;
   /* padding: 1em; */
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: wrap;
 }
 .modal-body p {
-  height: min-content;
+  font-family: 'Courier Prime', monospace;
+  font-size: 1rem;
+  background: rgba(200, 200, 200, 0.4);
+  padding: 0.7rem;
+  max-width: inherit;
+  overflow-wrap: anywhere;
 }
 .modal {
   display: block;
+}
+svg:hover {
+  width: 1.6rem;
+  height: 1.6rem;
 }
 
 @media (min-width: 955px) {

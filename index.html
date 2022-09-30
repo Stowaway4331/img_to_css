@@ -52,40 +52,40 @@
       <div class="image-area rendered-image-area">
         <h3>Rendered image</h3>
         <div id="canvas2" class="canvas2 image-viewer rendered-image-box">
-          <div id="rendered-image-info"></div>
+          <div width="1px" height="1px" id="rendered-image-info"></div>
         </div>
         <p id="image-size">Size after conversion: </p>
       </div>
     </div>
-    <div class="get-css-code" style="display: none;">
+    <div class="get-css-code">
       <label class="open-button" id="open-button">Get Image Code</label>
-      <div class="modal" id="modal">
+      <div class="modal" id="modal" style="display: none;">
         <div class="modal-container">
           <div class="modal-content" id="modal-content">
             <div class="modal-header">
-              <span class="code-css-header modal-header-item" id="code-css-header">CSS</span>
+              <span class="code-css-header modal-header-item active" id="code-css-header">CSS</span>
               <span class="code-base64-header modal-header-item" id="code-base64-header">base64</span>
-              <button class="close-button" id="close-button"><svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg>
+              <button class="close-button" style="cursor: pointer;" id="close-button"><svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
               </button>
             </div>
             <div class="modal-body">
-              <p>CSS - Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, eius, sunt similique cumque, ex incidunt voluptates sequi distinctio fuga maxime repellat. Aut officiis tempora est distinctio inventore accusantium velit laboriosam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, perspiciatis dolorem, eos id provident quae nemo nulla, obcaecati delectus cupiditate reprehenderit vel recusandae et error. Sint unde harum provident eius?
+              <p id="box-shadow-text">CSS - Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, eius, sunt similique cumque, ex incidunt voluptates sequi distinctio fuga maxime repellat. Aut officiis tempora est distinctio inventore accusantium velit laboriosam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, perspiciatis dolorem, eos id provident quae nemo nulla, obcaecati delectus cupiditate reprehenderit vel recusandae et error. Sint unde harum provident eius?
               </p>
-              <!-- <p style="display: none;">base64 - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum ratione sit ipsam itaque hic eos recusandae officia aliquid quo cupiditate iusto nobis inventore maiores, non, veritatis excepturi officiis quas quisquam.
-              </p> -->
+              <p id="base64-text" style="display: none;">base64 - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum ratione sit ipsam itaque hic eos recusandae officia aliquid quo cupiditate iusto nobis inventore maiores, non, veritatis excepturi officiis quas quisquam.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="project-info">
-      <p class="img-info css" style="display: block;">The rendered image is a string of text that is interpreted as an image using the <b>box-shadow</b> property. Is this a better way of rendering images? Absolutely not. The generated image is sometimes much bigger than the original and as you can see, worse in quality. <br>Why do it? These images are dynamic and each pixel's position can be controlled by making very few changes to the generated string. This can be used in browser games where textures need to dynamically react to change in camera angle and lighting.
+      <p class="img-info css" style="display: block;"><b>About</b><br>This output was created by resizing and setting each pixel as a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow">box-shadow</a> of a single pixel div, so no `img` tag or `background-image` is needed. Is this a better way of rendering images? Absolutely not. The generated image is sometimes much bigger than the original and as you can see, worse in quality. <br>Why do it? These images are dynamic and each pixel's position can be controlled by making very few changes to the generated string. This can be used in browser games where textures need to dynamically react to change in camera angle and lighting.
       </p>
       <p class="img-info base64" style="display: none;">The entire image is embedded inside the '&lt;img&gt;' tag using base64 encoding, so no need of external hosting. base64 is a simple binary to ASCII conversion algorithm where binary numbers 0-63 are assigned unique characters from A-Z, a-z, 0-9, + and / in that order.<br>'=' is used for padding.</p>
     </div>
   </main>
   <footer></footer>
   <script src="script.js"></script>
-  <!-- <script src="dialogCode.js"></script> -->
+  <script src="dialogCode.js"></script>
 </body>
 </html>
