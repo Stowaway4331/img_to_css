@@ -208,6 +208,7 @@ footer {
   transition: all ease-in-out 0.2s;
   text-align: center;
   cursor: pointer;
+  padding: 0 0.5rem;
 }
 .modal-header > span:hover {
   background: khaki;
