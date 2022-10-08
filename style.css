@@ -17,6 +17,7 @@
   --fs-title: 2.5em;
   --fs-subtitle: 1.5em;
   --fs-body: 1.3125em;
+  --fs-info: 1em;
   --fc-black: #1E1E1E;
   --bc-modal: #fff8be;
 }
@@ -137,6 +138,7 @@ input {
 }
 .project-info {
   text-align: justify;
+  font-size: var(--fs-info);
 }
 
 footer {
